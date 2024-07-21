@@ -1,0 +1,22 @@
+.group-info__card{
+    background-color: ALICEBLUE;
+
+    .group-info__content {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .group-info__others {
+        display: flex;
+        padding-bottom: 0;
+    }
+
+    .group-info__others-text {
+        font-size: 12px;
+        padding-bottom: 4px;
+        
+        color: #3c2ea8;
+        font-weight: bold;
+        padding-left: 3 px;
+    }
+}

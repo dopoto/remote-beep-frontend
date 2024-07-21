@@ -1,0 +1,68 @@
+<mat-card
+    *ngIf="(componentState$ | async)?.isExpanded === true"
+    class="app__expanded-card group-info__card"
+>
+    <mat-card-header>
+        <mat-card-title>Group Info</mat-card-title>
+        <mat-card-subtitle>
+            Share the address below to join new devices to your group.
+            <span
+                (click)="collapse()"
+                class="material-icons app__collapse-icon"
+                data-cy="group-info-collapse"
+                >expand_less</span
+            >
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="group-info__content">
+        <mat-form-field appearance="fill">
+            <mat-label>Your RemoteBeep group address</mat-label>
+            <input
+                matInput
+                data-cy="group-url"
+                type="text"
+                readonly
+                [value]="groupUrl$ | async"
+            />
+            <button
+                mat-icon-button
+                matSuffix
+                [attr.aria-label]="'Copy to clipboard'"
+                [cdkCopyToClipboard]="
+                    copyToClipboard((groupUrl$ | async) ?? '')
+                "
+                (click)="confirmCopyToClipboard()"
+            >
+                <mat-icon>content_copy</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <div class="group-info__others">
+            <div class="group-info__others-text" data-cy="group-others">
+                {{ otherDevicesMessage$ | async }}
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<mat-card
+    *ngIf="(componentState$ | async)?.isExpanded === false"
+    class="app__collapsed-card group-info__card"
+>
+    <div class="app__collapsed-card-container">
+        <div class="app__collapsed-card-title">Group Info</div>
+        <div class="app__collapsed-card-subtitle">
+            <div class="group-info__others">
+                <div class="group-info__others-text">
+                    {{ otherDevicesMessage$ | async }}
+                </div>
+            </div>
+        </div>
+        <span
+            (click)="expand()"
+            class="material-icons app__collapse-icon"
+            data-cy="group-info-expand"
+            >expand_more</span
+        >
+    </div>
+</mat-card>
