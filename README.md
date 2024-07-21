@@ -1,6 +1,18 @@
-# RemoteBeepClient
+# Remote Beep
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+A demo for playing sounds remotely, using .NET 8, SignalR, Angular and NGRX.
+
+## Demo
+
+https://remote-beep-frontend.vercel.app/
+
+## Source Code
+
+- https://github.com/dopoto/remote-beep-frontend
+Frontend app (this repo)
+
+- https://github.com/dopoto/remote-beep-backend
+Backend app
 
 ## Development server
 
