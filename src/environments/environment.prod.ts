@@ -4,6 +4,6 @@ export const environment: IConfig = {
   production: true,
   clientBuildNumber: '#{Build.BuildNumber}#',
   serverBuildNumber: 'TODO',
-  serverUrl: 'https://remote-beep-backend.azurewebsites.net',
+  serverUrl: 'http://remote-beep.runasp.net',
   corsConnectSrcWhiteList: '#{CorsConnectSrcWhiteList}#'
 };

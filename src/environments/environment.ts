@@ -8,7 +8,7 @@ export const environment: IConfig = {
     production: false,
     clientBuildNumber: 'DEV',
     serverBuildNumber: 'DEV',
-    serverUrl: 'https://remote-beep-backend.azurewebsites.net', // 'https://localhost:7133',
+    serverUrl: 'https://localhost:7004', //'http://remote-beep.runasp.net', // 'https://localhost:7133',
     corsConnectSrcWhiteList: ' -- Not in use. Set directly in index.html -- '
 };
 
